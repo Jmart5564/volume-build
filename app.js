@@ -8,7 +8,12 @@ let volume = 10;
     // define and grab DOM elements
     // display functions
 function changeVolume(input) {
-
+    if (volume === 0 && input === 'down') {
+        return;
+    }
+    if (volume === 20 && input === 'up') {
+        return;
+    }
     if (input === 'up') {
         volume++;
     }
